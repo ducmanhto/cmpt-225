@@ -7,7 +7,7 @@
  *                  This cell phone number must have the following format: XXX-XXX-XXXX.
  *                  This cell phone number cannot be modified. 
  *
- * Author: AL
+ * Author: AL/Duc Manh To
  * Last modified: Sept. 2022
  */
 
@@ -39,7 +39,7 @@ public:
 
     // Default Constructor
     // Description: Create a member with a cell phone number of "000-000-0000". 
-    // Postcondition: All data members set to an empty string, 
+    // Postc4ondition: All data members set to an empty string, 
     //                except the cell phone number which is set to "000-000-0000".
     Member();
 

@@ -18,7 +18,7 @@
     void List::clear() {
 
     delete [] elements;
-    elements = NULL;   // a habit to get into
+    elements = NULL;   
     elementCount = 0;
     return;
     } 

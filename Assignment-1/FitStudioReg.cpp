@@ -3,7 +3,7 @@
  *
  * Class Description: Fitness Studio Registration System
  *
- * Author: AL
+ * Author: AL/Duc Manh To
  * Last modified: Sept. 2022
  */
 

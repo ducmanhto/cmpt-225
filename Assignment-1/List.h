@@ -4,9 +4,10 @@
  * Class Description: List data collection ADT.
  * Class Invariant: Data collection with the following characteristics:
  *                   - Each element is unique (no duplicates).
- *                   - ***There is another class invariant: Add it here!***
+ *                   - Sort using phone number (order)
+ *                   - Value-oriented list
  *
- * Author: AL
+ * Author: AL/Duc Manh To
  * Last modified: Sept. 2022
  */
 
