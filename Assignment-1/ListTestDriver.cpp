@@ -217,7 +217,10 @@ int main(){
 
     Members->removeAll();
     if (Members->getElementCount() == 0)
+    {
+        cout << "The system is now empty" << endl;
         Members->printList();
+    }
     else
     {
         cout << "Remove all failed. Printing the members remaining: " << endl;
