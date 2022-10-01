@@ -1,7 +1,13 @@
-all: fsrs
+all: fsrs ltd
 
 fsrs: FitStudioReg.o List.o Member.o
 	g++ -Wall -o fsrs FitStudioReg.o List.o Member.o
+
+ltd: ListTestDriver.o List.o Member.o
+	g++ -Wall -o ltd ListTestDriver.o List.o Member.o
+
+ListTestDriver.o: ListTestDriver.cpp List.h Member.h
+	g++ -Wall -c ListTestDriver.cpp
 
 FitStudioReg.o: FitStudioReg.cpp List.h Member.h
 	g++ -Wall -c FitStudioReg.cpp
@@ -13,4 +19,4 @@ Member.o: Member.h Member.cpp
 	g++ -Wall -c Member.cpp
 
 clean:
-	rm -f fsrs *.o
+	rm -f ltd fsrs *.o

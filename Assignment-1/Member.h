@@ -2,12 +2,15 @@
  * Member.h
  * 
  * Class Description: Models a Fitness Studio Registration System.
+ *                    This member has the following characteristics:
+ *                    name, cell phone number, email address and a credit card number.
+ *                    Each member has a unique cell phone number.
  * Class Invariant: Each member has a unique cell phone number.
  *                  This cell phone number must have 12 digits.
  *                  This cell phone number must have the following format: XXX-XXX-XXXX.
  *                  This cell phone number cannot be modified. 
  *
- * Author: AL/Duc Manh To
+ * Author: AL
  * Last modified: Sept. 2022
  */
 
@@ -39,7 +42,7 @@ public:
 
     // Default Constructor
     // Description: Create a member with a cell phone number of "000-000-0000". 
-    // Postc4ondition: All data members set to an empty string, 
+    // Postcondition: All data members set to an empty string, 
     //                except the cell phone number which is set to "000-000-0000".
     Member();
 

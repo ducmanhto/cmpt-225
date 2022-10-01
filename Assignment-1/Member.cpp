@@ -18,9 +18,13 @@
 
 // Default Constructor
     // Description: Create a member with a cell phone number of "000-000-0000". 
-    // Postc4ondition: All data members set to an empty string, 
+    // Postcondition: All data members set to an empty string, 
     //                except the cell phone number which is set to "000-000-0000".
     Member::Member(){
+        this->name = "";
+        this->phone = "000-000-0000";
+        this->email = "";
+        this->creditCard = "";
     }
 
     // Parameterized Constructor
@@ -28,7 +32,11 @@
     // Postcondition: If aPhone does not have 12 digits, then aPhone is set to "000-000-0000".
     //                All other data members set to an empty string.
     Member::Member(string aPhone){
-        this->phone = aPhone;
+        this->name = "";
+        this->setPhone(aPhone);
+        this->email = "";
+        this->creditCard = "";
+        
     }
 	
     // Parameterized Constructor
@@ -36,7 +44,7 @@
     // Postcondition: If aPhone does not have 12 digits, then aPhone is set to "000-000-0000".
     Member::Member(string aName, string aPhone, string anEmail, string aCreditCard){
         this->name = aName;
-        this->phone = aPhone;
+        this->setPhone(aPhone);
         this->email = anEmail;
         this->creditCard = aCreditCard;
     }
@@ -66,6 +74,43 @@
     // Description: Sets the member's name.
     void Member::setName(const string aName){
         this->name = aName;
+    }
+
+    // Description: Sets the member's cell phone number - Private method
+    // Reflection: Why is this method not part of the public interface?
+    //             You don't want the wrong code to access the phone number 
+    //             so the phone numbers are protected in private 
+    void Member::setPhone(const string aPhone){
+        //Check if there are 12 digits in the phone number
+        if (aPhone.length() != SIZE_OF_PHONE_NUMBER)
+        {
+            this->phone = "000-000-0000";
+            return;
+        }
+        
+        //Check if phone number is in the right format 
+        for(int i = 0; i < SIZE_OF_PHONE_NUMBER; i++)
+        {
+            if (i == 3 || i == 7)
+            {
+                if (aPhone[i] != '-')
+                {
+                   this->phone = "000-000-0000";
+                    return; 
+                }
+            }
+            else
+            {
+                if (aPhone[i] < '0' || aPhone[i] > '9')
+                {
+                    this->phone = "000-000-0000";
+                    return;
+                }
+            }
+        }
+        //Set phone if it is in correct format
+        this->phone = aPhone;
+        return;
     }
 
     // Description: Sets the member's email.
