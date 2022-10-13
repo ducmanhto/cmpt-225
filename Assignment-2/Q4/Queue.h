@@ -4,8 +4,8 @@
  * Description: Array-based implementation of Queue as an ADT class
  * Class Invariant: Queue maintained in FIFO order
  *
- * Author:
- * Date:
+ * Author: Duc Manh To
+ * Date: October 2022
  */
  
 #ifndef QUEUE_H

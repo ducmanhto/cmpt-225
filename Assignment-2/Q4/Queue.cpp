@@ -4,8 +4,8 @@
  * Description: Array-based implementation of Queue as an ADT class
  * Class Invariant: Queue maintained in FIFO order
  *
- * Author:
- * Date:
+ * Author: Duc Manh To
+ * Date: October 2022
  */
  
 #include <iostream>
@@ -17,7 +17,7 @@ using std::endl;
 // Description: Constructor
 Queue::Queue() 
 {
-    elements = new int[INITIAL_CAPACITY];
+    elements = NULL;
 }
 
 // Description: Destructor
