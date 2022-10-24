@@ -3,8 +3,8 @@
  *
  * Description: Evaluation of infix expressions using two Stacks.
  *
- * Author:
- * Date:
+ * Author: Duc Manh To  
+ * Date: October 2022
  */
 
 #include <iostream>
