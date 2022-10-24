@@ -55,7 +55,30 @@ DataCollection::~DataCollection(){
 void DataCollection::append(int newElement){
 
    // Put your code here!
+   if (head == nullptr)
+   {
+      Node* toAppend = new Node(newElement);
 
+      head = toAppend;
+
+      if(head == nullptr){
+         throw UnableToInsertException("Cannot insert member into DC");
+      }
+   }
+   else{
+      Node* cursor = head;
+      while (cursor->next != NULL)
+      {
+         cursor = cursor->next;
+      }
+
+      Node* toAppend = new Node(newElement);
+
+      cursor->next = toAppend;
+
+      if(cursor->next == nullptr)
+         throw UnableToInsertException("Cannot insert member into DC");
+   }
    return;
 }
 
@@ -64,7 +87,26 @@ void DataCollection::append(int newElement){
 void DataCollection::prepend(int newElement){
    
    // Put your code here!
+   if(head == nullptr){
+      Node* toPreppend = new Node(newElement);
 
+      head = toPreppend;
+
+      if(head == nullptr){
+         throw UnableToInsertException("Cannot insert member into DC");
+      }
+   }
+   else{
+      Node* toPreppend = new Node(newElement);
+
+      toPreppend->next = head;
+      head = toPreppend;
+      if (head == nullptr)
+      {
+         throw UnableToInsertException("Cannot insert member into DC");
+      }
+      
+   }
    return;
 }
  
