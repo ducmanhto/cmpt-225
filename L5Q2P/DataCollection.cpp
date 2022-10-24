@@ -57,12 +57,10 @@ void DataCollection::append(int newElement){
    // Put your code here!
    if (head == nullptr)
    {
-      Node* toAppend = new Node(newElement);
-
-      head = toAppend;
+      head = new Node(newElement);
 
       if(head == nullptr){
-         throw UnableToInsertException("Cannot insert member into DC");
+         throw UnableToInsertException("No memory for allocation");
       }
    }
    else{
@@ -77,7 +75,7 @@ void DataCollection::append(int newElement){
       cursor->next = toAppend;
 
       if(cursor->next == nullptr)
-         throw UnableToInsertException("Cannot insert member into DC");
+         throw UnableToInsertException("No memory for allocation");
    }
    return;
 }
@@ -88,22 +86,22 @@ void DataCollection::prepend(int newElement){
    
    // Put your code here!
    if(head == nullptr){
-      Node* toPreppend = new Node(newElement);
-
-      head = toPreppend;
+      head = new Node(newElement);
 
       if(head == nullptr){
-         throw UnableToInsertException("Cannot insert member into DC");
+         throw UnableToInsertException("No memory for allocation");
       }
    }
    else{
       Node* toPreppend = new Node(newElement);
 
-      toPreppend->next = head;
-      head = toPreppend;
-      if (head == nullptr)
+      if (toPreppend == nullptr)
       {
-         throw UnableToInsertException("Cannot insert member into DC");
+         throw UnableToInsertException("No memory for allocation");
+      }
+      else{
+         toPreppend->next = head;
+         head = toPreppend;
       }
       
    }
