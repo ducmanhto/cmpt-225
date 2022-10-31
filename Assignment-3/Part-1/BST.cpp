@@ -206,5 +206,6 @@
          destructR(current->left);
       if (current->hasRight())
          destructR(current->right);
-      
+
+      delete current;
    }
