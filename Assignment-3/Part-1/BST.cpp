@@ -200,12 +200,15 @@
    // Description: Recursive delete every node in BST.
    void BST::destructR(BSTNode* current){
       
-      if (current->isLeaf())
+      if (current->isLeaf()){
          delete current;
+         return;
+      }
       if (current->hasLeft())
          destructR(current->left);
       if (current->hasRight())
          destructR(current->right);
 
       delete current;
+      return;
    }
