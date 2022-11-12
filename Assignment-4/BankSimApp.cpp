@@ -23,7 +23,6 @@ int main(){
 
     Queue<Event>* bankLine = new Queue<Event>();    //Bank line
     PriorityQueue<Event>* eventPriorityQueue = new PriorityQueue<Event>();  //Event Queue
-    PriorityQueue<Event>* waitTimePriorityQueue = new PriorityQueue<Event>(); //Queue to calculate the average wait time
 
     bool tellerAvailable = true;
 
@@ -35,7 +34,6 @@ int main(){
         cin >> l;
         Event newArrivalEvent = Event('A', t, l);
         eventPriorityQueue->enqueue(newArrivalEvent);
-        waitTimePriorityQueue->enqueue(newArrivalEvent);
         numCustomer++;
     }
 
